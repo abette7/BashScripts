@@ -1,6 +1,12 @@
 for var in "$@"
 do
 myPath="$(pwd $var)"
-cd "$myPath"
-zip -r -X "${var}".zip "${var}"
+myName="$(basename "${var}")"
+zipName="./${myName}.zip"
+if [ -d "$arg" ]; then
+    rPath="./${myName}/*"
+else
+    rPath="./${myName}"
+fi
+cd "$myPath";zip -qr -X "$zipName" "$rPath"
 done
