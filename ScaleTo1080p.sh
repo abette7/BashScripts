@@ -3,5 +3,5 @@
 for var in "$@"
 do
 mpgOut="${var%.*}-1080p.${var##*.}" 
-ffmpeg -i "$var" -c:v libx264 -crf 23 -preset veryfast -c:a copy "$mpgOut"
+ffmpeg -i "$var" -c:v libx264 -vf "scale=-1:1080" -crf 23 -preset veryfast -c:a copy "$mpgOut"
 done
