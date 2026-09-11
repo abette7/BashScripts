@@ -1,0 +1,1 @@
+ollama launch opencode --model qwen3.6:35b-mlx

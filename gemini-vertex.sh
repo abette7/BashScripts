@@ -1,0 +1,5 @@
+export GOOGLE_CLOUD_PROJECT=temp-poc-1
+export GOOGLE_CLOUD_LOCATION=global
+export GOOGLE_GENAI_USE_VERTEXAI=True
+export GOOGLE_CLOUD_LOCATION_MODELS=us-central1
+gemini
